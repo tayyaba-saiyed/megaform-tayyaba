@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'NotoSans-Regular';
+    src: url('../fonts/Noto_Sans/NotoSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Inter_Bold';
+    src: url('../fonts/Inter/Inter_18pt-Bold.ttf');
+}
+
+body {
+    background-color: #7A5CFA;
+
+
+}
+
+.container {
+    width: 85%;
+    background-color: #FFFFFF;
+    height: auto;
+    margin: 30px auto 30px auto;
+    border-radius: 20px;
+    padding: 40px;
+    font-family: 'NotoSans-Regular';
+}
+
+/* name input  */
+.name label {
+    color: #666666;
+    font-size: 12px;
+    font-weight: 600;
+    gap: 8px;
+}
+
+.name input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    margin: 10px 0 10px 0;
+    border-radius: 8px;
+
+}
+
+.name-span {
+    color: #EB5757;
+    font-size: 12px;
+    font-weight: 400;
+    display: none;
+}
+
+/* email input */
+.email {
+    margin-top: 10px;
+}
+
+.email label {
+    color: #666666;
+    font-size: 12px;
+    font-weight: 600;
+
+    gap: 8px;
+}
+
+.email input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    margin: 10px 0 10px 0;
+    border-radius: 8px;
+
+}
+
+/* password input */
+.password {
+    margin-top: 10px;
+}
+
+.password label {
+    color: #666666;
+    font-size: 12px;
+    font-weight: 600;
+
+    gap: 8px;
+}
+
+.password input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    margin: 10px 0 10px 0;
+    border-radius: 8px;
+
+}
+
+/* address  textarea*/
+.address label {
+    color: #666666;
+    font-size: 12px;
+    font-weight: 600;
+    gap: 8px;
+}
+
+.address textarea {
+    border: 1px solid #cccccc;
+    margin: 10px 0 10px 0;
+    border-radius: 8px;
+    font-family: 'NotoSans-Regular';
+    font-weight: 400;
+    color: #666666;
+    padding: 10px;
+}
+
+/* choose your sports */
+.checkbox {
+    color: #666666;
+    font-size: 12px;
+    font-weight: 400;
+    gap: 8px;
+    padding-top: 10px;
+
+
+}
+
+.choose-sports {
+    color: #666666;
+    font-size: 12px;
+    font-weight: 600;
+    gap: 8px;
+
+
+}
+
+.cricket {
+    padding: 5px;
+}
+
+/* choose your gender */
+.radio {
+    color: #666666;
+    font-size: 12px;
+    font-weight: 400;
+    gap: 8px;
+    margin: 10px 0;
+
+}
+
+.choose-gender {
+    color: #666666;
+    font-size: 12px;
+    font-weight: 600;
+    gap: 8px;
+
+}
+
+.gender {
+    padding: 5px;
+}
+
+/* select your country */
+.select-box {
+    width: 100%;
+    height: 40px;
+    font-size: 16;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 8px;
+
+
+}
+
+.select {
+    color: #666666;
+    font-size: 12px;
+    font-weight: 600;
+    gap: 8px;
+    padding-top: 10px;
+}
+
+/* button group  */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 0 0;
+}
+
+.reset {
+    padding: 12px 50px;
+    border-radius: 8px;
+    border: 1px solid #7A5CFA;
+    background-color: #FFFFFF;
+    color: #7A5CFA;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.save {
+    padding: 12px 52px;
+    border-radius: 8px;
+    border: none;
+    background-color: #7A5CFA;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text-area {
+    width: 100%;
+}
+
+
+table {
+    width: 100%;
+}
+
+table tr {
+   
+}
+
+table th {
+    padding-bottom: 20px;
+
+}
+
+tbody td {
+    padding: 15px 0;
+}
+
+
+.nodatafound {
+    text-align: center;
+    font-family: 'Inter_Bold';
+
+}
+
+.nodatafound p {
+    font-weight: 700;
+    font-size: 50px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width=786px) {}
+
+.print-message p {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 30px;
+    color: #EB5757;
+    font-weight: 800;
+    display: none;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mega form</title>
+    <!-- bootstrap file -->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="myForm">
+            <!-- name  -->
+            <div class="name">
+                <label for="namelable">Name</label>
+                <input type="text" placeholder="Enter name" id="nameId">
+            </div>
+            <span class="name-span" id="nameSpan">"Please enter your name"</span>
+
+            <!-- email  -->
+
+            <div class="email">
+                <label for="email-lable">Email</label>
+                <input type="email" placeholder="Enter Email" id="emailId">
+            </div>
+            <span class="name-span" id="emailSpan">"Please enter your email"</span>
+
+            <!-- password -->
+            <div class="password">
+                <label for="password-lable">Password</label>
+                <input type="password" placeholder="Enter Password" id="passwordId">
+            </div>
+            <span class="name-span" id="passwordSpan">"Your Password is between 4 and 12 character"</span>
+
+            <!-- address -->
+            <div class="address">
+                <label for="address-lable">Address</label>
+                <textarea name="address-text" id="addressId" class="text-area"
+                    placeholder="Enter your address"></textarea>
+            </div>
+            <span class="name-span" id="addressSpan">"Please enter your Address"</span>
+            <!-- choose your sports -->
+            <div class="checkbox">
+                <label for="checkboxlable" class="choose-sports">choose your sports</label>
+
+                <div class="cricket">
+                    <input type="checkbox" name="sport"> cricket
+                </div>
+                <div class="cricket">
+                    <input type="checkbox" name="sport"> football
+                </div>
+                <div class="cricket">
+                    <input type="checkbox" name="sport"> baseball
+                </div>
+            </div>
+            <span class="name-span" id="checkSpan">"Please choose sports"</span>
+            <!-- choose your gender -->
+            <div class="radio">
+                <label for="radio-lable" class="choose-gender">Choose your gender</label>
+                <div class="gender">
+                    <input type="radio" name="gender"> Male
+                </div>
+                <div class="gender">
+                    <input type="radio" name="gender"> Female
+                </div>
+                <div class="gender">
+                    <input type="radio" name="gender"> Prefer not to say
+                </div>
+            </div>
+            <span class="name-span" id="genderSpan">"please choose gender"</span>
+
+            <!-- select your country -->
+            <div class="select">
+
+                <label for="select-country">Select your country</label>
+                <select name="selectyourcountry" id="mySelect" class="select-box">
+                    <option value="">please select country</option>
+                    <option value="1">India</option>
+                    <option value="2">Pakistan</option>
+                    <option value="3">UAE</option>
+                </select>
+            </div>
+            <span class="name-span" id="selectSpan">"please choose country"</span>
+
+
+            <!-- button group -->
+            <div class="button-group">
+                <button type="button" class="reset" onclick="resetFormButton()">Reset</button>
+
+                <button type="button" class="save" onclick="saveFormButton()">Save</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- <div class="print-message">
+        <p id="thisIsComplete">"Please fill the form"</p>
+    </div> -->
+
+
+
+
+    <div class="container">
+        <!-- <div class="nodatafound">
+         <p>No user Added</p>
+        </div> -->
+        <table>
+            <thead>
+
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Address</th>
+                <th>Sports</th>
+                <th>Gender</th>
+                <th>Country</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
+            </thead>
+            <tbody id="tBody">
+                <tr>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <!-- bootstrap file -->
+    <script src="assets/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/popper.min.js"></script>
+
+
+
+    <!-- js file -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
