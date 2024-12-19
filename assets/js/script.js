@@ -65,9 +65,16 @@ function saveFormButton() {
     }
 
     // checkbox
-    const checkedElements = document.querySelectorAll("input[name='sport']:checked");
+    // const checkedElements = document.querySelectorAll("input[name='sport']:checked");
+    const checkedElements = document.querySelectorAll("input[name='sport']");
     const checkSpan = document.getElementById("checkSpan");
-    if (checkedElements.length > 0) {
+    const checkedItem = [];
+    for (let i = 0; i < checkedElements.length; i++) {
+        if (checkedElements[i].checked)
+            checkedItem.push(checkedElements[i].value);  
+    }
+
+    if (checkedItem.length > 0) {
         checkSpan.style.display = 'none';
     }
     else {
@@ -75,9 +82,16 @@ function saveFormButton() {
     }
 
     // radio 
-    const genderElements = document.querySelectorAll('input[name="gender"]:checked');
+    // const genderElements = document.querySelectorAll('input[name="gender"]:checked');
+    const genderElements = document.querySelectorAll('input[name="gender"]');
     const genderSpan = document.getElementById("genderSpan");
-    if (genderElements.length > 0) {
+    const genderItem = [];
+    for (let i = 0; i < genderElements.length; i++) {
+        if (genderElements[i].checked) 
+            genderItem.push(genderElements[i].value);
+    }
+
+    if (genderItem.length > 0) {
         genderSpan.style.display = 'none';
     }
     else {
@@ -122,8 +136,8 @@ function saveFormButton() {
         passwordid.value.length > 4 &&
         passwordid.value.length < 12 &&
         addressid.value &&
-        checkedElements.length != 0 &&
-        genderElements.length != 0 &&
+        checkedItem .length != 0 &&
+        genderItem.length != 0 &&
         selectid.value
 
     ) {
@@ -135,6 +149,8 @@ function saveFormButton() {
             password: passwordid.value,
             address: addressid.value,
             country: selectid.value,
+            sport:checkedItem,
+            gender: genderItem
 
         };
         addTableData(formData);
@@ -166,6 +182,8 @@ function addTableData(formData) {
     passwordTd.innerHTML = formData.password;
     AddressTd.innerHTML = formData.address;
     selectTd.innerHTML = formData.country;
+    checkTd.innerHTML = formData.sport;
+    genderTd.innerHTML = formData.gender;
 
 
     tr.append(
