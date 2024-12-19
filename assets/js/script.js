@@ -39,7 +39,7 @@ function saveFormButton() {
         emailid.style.border = '1px solid black';
         console.log('its ok');
     }
-    
+
 
     // password 
     if (passwordid.value.length < 4 || passwordid.value.length > 12) {
@@ -63,24 +63,35 @@ function saveFormButton() {
         addressspan.style.display = 'none';
         addressid.style.border = '1px solid black';
     }
-    
+
     // checkbox
-    const checkedElements = document.querySelectorAll("input[name='sport']:checked");
+    // const checkedElements = document.querySelectorAll("input[name='sport']:checked");
+    const checkedElements = document.querySelectorAll("input[name='sport']");
     const checkSpan = document.getElementById("checkSpan");
-    if (checkedElements.length > 0) {
+    const checkedItem = [];
+    for (let i = 0; i < checkedElements.length; i++) {
+        if (checkedElements[i].checked)
+            checkedItem.push(checkedElements[i].value);  
+    }
+
+    if (checkedItem.length > 0) {
         checkSpan.style.display = 'none';
     }
     else {
         checkSpan.style.display = 'block';
     }
 
- 
-
- 
     // radio 
-    const genderElements = document.querySelectorAll('input[name="gender"]:checked');
+    // const genderElements = document.querySelectorAll('input[name="gender"]:checked');
+    const genderElements = document.querySelectorAll('input[name="gender"]');
     const genderSpan = document.getElementById("genderSpan");
-    if (genderElements.length > 0) {
+    const genderItem = [];
+    for (let i = 0; i < genderElements.length; i++) {
+        if (genderElements[i].checked) 
+            genderItem.push(genderElements[i].value);
+    }
+
+    if (genderItem.length > 0) {
         genderSpan.style.display = 'none';
     }
     else {
@@ -93,7 +104,7 @@ function saveFormButton() {
     // select 
     const selectid = document.getElementById("mySelect");
     const selectspan = document.getElementById("selectSpan");
-    
+
     // console.log(selectid.value);
     if (!selectid.value) {
         selectspan.style.display = 'block';
@@ -101,10 +112,10 @@ function saveFormButton() {
     else {
         selectspan.style.display = 'none';
     }
-    
+
     // span message for all values
-    
-    
+
+
     // message "please fill the form "
     // const thisIsComplete = document.getElementById("thisIsComplete");
     // const allSpanvalue = document.querySelectorAll(".name-span")
@@ -116,21 +127,21 @@ function saveFormButton() {
     //     thisIsComplete.style.display = 'block';
     //     allSpanvalue.style.display = 'none';
 
-    
+
     // }
-    
-    
+
+
     if (nameid.value &&
         emailid.value &&
         passwordid.value.length > 4 &&
         passwordid.value.length < 12 &&
         addressid.value &&
-        checkedElements.length != 0 &&
-        genderElements.length != 0 &&
-        selectid.value 
+        checkedItem .length != 0 &&
+        genderItem.length != 0 &&
+        selectid.value
 
     ) {
-        
+
 
         const formData = {
             name: nameid.value,
@@ -138,21 +149,24 @@ function saveFormButton() {
             password: passwordid.value,
             address: addressid.value,
             country: selectid.value,
+            sport:checkedItem,
+            gender: genderItem
+
         };
         addTableData(formData);
         resetAfterSave();
         // console.log(formData.country.value);
-        
 
-    //    console.log(formData);
-       
-      
+
+        //    console.log(formData);
+
+
 
     }
 }
 
 function addTableData(formData) {
-    
+
     const tr = document.createElement("tr");
     // console.log(tr);
     const nameTd = document.createElement("td");
@@ -168,7 +182,8 @@ function addTableData(formData) {
     passwordTd.innerHTML = formData.password;
     AddressTd.innerHTML = formData.address;
     selectTd.innerHTML = formData.country;
-    
+    checkTd.innerHTML = formData.sport;
+    genderTd.innerHTML = formData.gender;
 
 
     tr.append(
@@ -192,11 +207,9 @@ function resetAfterSave() {
     emailid.value = "";
     passwordid.value = "";
     addressid.value = "";
-    selectid.value = "" ;
-// console.log(selectid.value);
-
+    selectid.value = "";
 }
- 
+
 
 
 
