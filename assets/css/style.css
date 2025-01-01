@@ -217,9 +217,7 @@ table {
     width: 100%;
 }
 
-table tr {
-   
-}
+
 
 table th {
     padding-bottom: 20px;
@@ -227,30 +225,24 @@ table th {
 }
 
 tbody td {
-    padding: 15px 0;
+    /* padding: 10px 0; */
+    padding: 10px 0 ;
 }
 
 
-.nodatafound {
-    text-align: center;
+/* no data found */
+.nodatafound{
     font-family: 'Inter_Bold';
-
+    
+   
 }
 
-.nodatafound p {
-    font-weight: 700;
-    font-size: 50px;
+/* data found */
 
 
+.tabledata{
+    display: none;
 }
-
-
-
-
-
-
-
-
 
 
 

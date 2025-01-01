@@ -15,8 +15,9 @@
 
 <body>
 
+
     <div class="container">
-        <form id="myForm">
+        <form>
             <!-- name  -->
             <div class="name">
                 <label for="namelable">Name</label>
@@ -78,7 +79,6 @@
 
             <!-- select your country -->
             <div class="select">
-
                 <label for="select-country">Select your country</label>
                 <select name="selectyourcountry" id="mySelect" class="select-box">
                     <option value="">please select country</option>
@@ -100,39 +100,33 @@
     </div>
 
 
-    <!-- <div class="print-message">
-        <p id="thisIsComplete">"Please fill the form"</p>
-    </div> -->
-
 
 
 
     <div class="container">
-        <!-- <div class="nodatafound">
-         <p>No user Added</p>
-        </div> -->
-        <table>
-            <thead>
+        <div class="nodatafound" id="dataNotFound">
+            <h1 class="text-center">no data found</h1>
+        </div>
+        <div class="tabledata" id="dataFoundOnSave">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Address</th>
+                        <th>Sports</th>
+                        <th>Gender</th>
+                        <th>Country</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody">
 
-                <th>Name</th>
-                <th>Email</th>
-                <th>Password</th>
-                <th>Address</th>
-                <th>Sports</th>
-                <th>Gender</th>
-                <th>Country</th>
-                <th>Edit</th>
-                <th>Delete</th>
-
-            </thead>
-            <tbody id="tBody">
-                <tr>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-
-
+                </tbody>
+            </table>
+        </div>
 
 
     </div>
